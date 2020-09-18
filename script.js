@@ -39,7 +39,7 @@ var charSelect = function () {
       return
     };
   };
-  // charLower()
+  charLower()
 
   // UPPER-CASE ALPHA CHARACTER PROMPT
   var charUpper = function () {
@@ -55,7 +55,7 @@ var charSelect = function () {
       return
     };
   };
-  // charUpper()
+  charUpper()
 
   // NUMERIC CHARACTER PROMPT
   var charNumeric = function () {
@@ -71,7 +71,7 @@ var charSelect = function () {
       return;
     };
   };
-  // charNumeric()
+  charNumeric()
 
   // SPECIAL CHARACTER PROMPT
   var charSpecial = function () {
@@ -88,7 +88,7 @@ var charSelect = function () {
       return
     };
   };
-  // charSpecial()
+  charSpecial()
 
   // create error response if no character types are selected
   if (charLower === "" && charUpper === ""
