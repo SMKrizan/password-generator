@@ -18,7 +18,6 @@ var pwLength = function () {
     pwLength();
     return;
   };
-
 };
 pwLength()
 
@@ -89,18 +88,22 @@ var charSelect = function () {
     };
   };
   charSpecial()
-
-  // create error response if no character types are selected
-  if (charLower === "" && charUpper === ""
-    && charNumeric === "" && charSpecial === "") {
-    window.alert("Please select at least one character type.");
-    charSelect();
-  }
-  else {
-    return
-  }
 }
 charSelect()
+
+// create error response if no character types are selected
+var checkLibrary = function (library) {
+  if (library === "") {
+    window.alert("Please select at least one character type.");
+    charSelect();
+    return;
+  }
+  else {
+    generatePassword(length, library);
+    return;
+  }
+}
+checkLibrary(library)
 
 console.log("library complete: " + library)
 console.log("password length: " + length)
@@ -112,7 +115,7 @@ generatePassword = function (length, library) {
   let password = "";
   for (let i = 0; i < length; i++) {
     password += lib[Math.floor(Math.random() * library.length)]
-    window.alert("Click 'Generate Password' to receive your password.")
+    // window.alert("Click 'Generate Password' to receive your password.")
   }
   return password;
 };
