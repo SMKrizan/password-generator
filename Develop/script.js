@@ -23,6 +23,7 @@ var pwLength = function () {
     return length
   } else {
     window.alert("Please enter a number between 0 and 129.")
+    pwLength();
     return
   };
 };
