@@ -8,9 +8,9 @@ var library = "";
 
 //  a prompt asking user for password length (8 <= pwd <= 128), stored as a variable.
 var pwLength = function () {
-  var userInput_pwLength = window.prompt("Please enter a number between 7 and 129. Your password must contain at least 8 characters, and no more than 128.");
+  var userInput_pwLength = window.prompt("Please enter a number between 7 and 129: your password must contain at least 8 characters, and no more than 128.");
   if (userInput_pwLength >= 8 && userInput_pwLength <= 128) {
-    window.alert("A random password will be generated for you.");
+    window.alert("You will be asked to select which of the four character types to include in the password: lower-case letters, upper-case letters, numbers, and special characters. Once your selections have been made you will be able to click the 'Generate Password' button to generate one or more passwords that meet the criteria you have selected.");
     length = parseInt(userInput_pwLength)
     return length
   } 
