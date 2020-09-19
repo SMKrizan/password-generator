@@ -8,15 +8,15 @@ var library = "";
 
 //  a prompt asking user for password length (8 <= pwd <= 128), stored as a variable.
 var pwLength = function () {
-  var userInput_pwLength = window.prompt("Please enter a number between 0 and 129. Your password must contain at least 8 characters, and no more than 128.");
-  if (userInput_pwLength >= 1 && userInput_pwLength <= 128) {
+  var userInput_pwLength = window.prompt("Please enter a number between 7 and 129. Your password must contain at least 8 characters, and no more than 128.");
+  if (userInput_pwLength >= 8 && userInput_pwLength <= 128) {
     window.alert("A random password will be generated for you.");
-    length += parseInt(userInput_pwLength)
+    length = parseInt(userInput_pwLength)
     return length
-  } else {
-    window.alert("Please enter a number between 0 and 129.")
+  } 
+  else {
+    window.alert("Please enter a number between 7 and 129.")
     pwLength();
-    return;
   };
 };
 pwLength()
@@ -91,6 +91,18 @@ var charSelect = function () {
 }
 charSelect()
 
+// START RANDOM PASSWORD GENERATOR
+// create function to generate password using selected criteria
+var generatePassword = function (length, library) {
+  const lib = library.split("");
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    password += lib[Math.floor(Math.random() * library.length)]
+    // window.alert("Click 'Generate Password' to receive your password.")
+  }
+  return password;
+};
+
 // create error response if no character types are selected
 var checkLibrary = function (library) {
   if (library === "") {
@@ -108,17 +120,7 @@ checkLibrary(library)
 console.log("library complete: " + library)
 console.log("password length: " + length)
 
-// START RANDOM PASSWORD GENERATOR
-// create function to generate password using selected criteria
-generatePassword = function (length, library) {
-  const lib = library.split("");
-  let password = "";
-  for (let i = 0; i < length; i++) {
-    password += lib[Math.floor(Math.random() * library.length)]
-    // window.alert("Click 'Generate Password' to receive your password.")
-  }
-  return password;
-};
+
 // displays a password to the page when "generate password" is clicked
 console.log(generatePassword(length, library));
 
