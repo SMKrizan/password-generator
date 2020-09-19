@@ -19,4 +19,4 @@ In an era where the ability to password-protect sensitive digitally-accessed inf
 https://smkrizan.github.io/password-generator/
 
 ### CONTRIBUTION
-Made with ❤️&#9749 by Sara Krizan
+Made with ☕❤️ by Sara Krizan
