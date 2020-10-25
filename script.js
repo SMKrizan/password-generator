@@ -21,7 +21,7 @@ var pwLength = function () {
 };
 pwLength()
 
-//  a series of prompts to confirm desired character types with user as boolean operators (lower, upper, numeric, and/or special characters)
+// a series of prompts to confirm with user the desired character types as boolean operators (lower, upper, numeric, and/or special characters)
 var charSelect = function () {
 
   // LOWER-CASE ALPHA CHARACTER PROMPT
@@ -98,8 +98,8 @@ var generatePassword = function (length, library) {
   let password = "";
   for (let i = 0; i < length; i++) {
     password += lib[Math.floor(Math.random() * library.length)]
-    // window.alert("Click 'Generate Password' to receive your password.")
   }
+  // window.alert("Click 'Generate Password' to receive your password.")
   return password;
 };
 
